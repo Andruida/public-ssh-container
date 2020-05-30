@@ -1,0 +1,28 @@
+32c32
+< #PermitRootLogin prohibit-password
+---
+> PermitRootLogin no
+61c61
+< ChallengeResponseAuthentication no
+---
+> #ChallengeResponseAuthentication no
+86,89c86,89
+< #AllowAgentForwarding yes
+< #AllowTcpForwarding yes
+< #GatewayPorts no
+< X11Forwarding yes
+---
+> AllowAgentForwarding no
+> AllowTcpForwarding no
+> GatewayPorts no
+> X11Forwarding no
+94c94
+< #PrintLastLog yes
+---
+> PrintLastLog no
+103c103
+< #PermitTunnel no
+---
+> PermitTunnel no
+105a106
+> AllowStreamLocalForwarding no

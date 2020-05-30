@@ -1,0 +1,16 @@
+4,5c4,5
+< @include common-auth
+< 
+---
+> #@include common-auth
+> auth	required	pam_permit.so
+22c22
+< session    required     pam_loginuid.so
+---
+> session optional pam_loginuid.so
+33,34c33,34
+< session    optional     pam_motd.so  motd=/run/motd.dynamic
+< session    optional     pam_motd.so noupdate
+---
+> #session    optional     pam_motd.so  motd=/run/motd.dynamic
+> #session    optional     pam_motd.so noupdate
