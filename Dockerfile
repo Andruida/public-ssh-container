@@ -15,7 +15,7 @@ RUN passwd -d root \
  && chmod 555 /srv/sshapp/run.sh
 
 # If you want multiple users, running multiple apps, add them here (the -p sKzEqcFhB5Zfo sets the password to "admin")
-RUN useradd -p sKzEqcFhB5Zfo -s /srv/sshapp/run.sh play
+RUN useradd -m -p sKzEqcFhB5Zfo -s /srv/sshapp/run.sh play
 
 
 # Overwrite ssh host keys if provided
