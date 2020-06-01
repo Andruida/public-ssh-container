@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y openssh-server locales patch \
 
 ADD ["./files", "/srv/sshapp/"]
 
-RUN passwd -d root \
+RUN passwd -l root \
  && usermod --shell /usr/sbin/nologin root \
  && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
  && patch /etc/ssh/sshd_config /srv/sshapp/sshd_config.patch \
